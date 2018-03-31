@@ -234,3 +234,19 @@ with tf.Session() as sess:
 ```
 ## 使用模型预测
 和训练模型类似，这里我就偷下懒，注意理解好sess.run的原理。
+
+## 写在最后
+掌握好一个套路后，我们对tensorflow的机制就不陌生了。程序能跑起来之后，然后就是对核心模型的调整，也就是调参。deep learning的程序员80%的时间都在这里。最后说下附带的代码
+
+> * captcha_params_and_cfg.py   
+> * inception_utils.py         
+> * inception_v1                
+> * load_data2.py
+> * train.py
+
+功能依次为
+> * 设定项目路径和固定参数等
+> * inception的一些参数设定      
+> * 模型核心网络inception_v1           
+> * 读取数据，生成tf_record
+> * 设定损失函数和优化函数，训练模型
