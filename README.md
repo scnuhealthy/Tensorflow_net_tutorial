@@ -1,7 +1,7 @@
 # 如何用tensorflow写出高级网络?一个套路就够了
 
 ------
-
+![1](https://github.com/scnuhealthy/Tensorflow_net_tutorial/blob/master/imgs/tensorflow.jpg)
 tensorflow，一个美好的深度学习框架，但是它的高门槛对beginer不太友好。虽然官网通过的“开始使用”MNIST的例子介绍了tensorflow的基础语法，但是这对于我们做学术研究的“武器”还远远不足。本文主要介绍使用tensorflow在**图像处理**领域的编程思路，由于保密关系，我不方便公开代码处理的数据，读者可以参考我github的另一个[project](https://github.com/scnuhealthy/Tensorflow_Captcha)，生成验证码实现分类任务。本文不会详细解释每行代码的作用，将集中于介绍tensorflow的**套路**，让读者掌握一个模版。在前人代码的基础上，你会发现，什么googlenet,resnet这种很深的网络也很容易实现。
 
 对于一个**完整**的项目,tensorflow编程的流程是
@@ -90,6 +90,7 @@ def load_data(tol_num,train_num):
     writer.close()
     '''
 ```
+![2](https://github.com/scnuhealthy/Tensorflow_net_tutorial/blob/master/imgs/tf_records.png)
 ## 明确输入和输出，定义网络
 
 一般而言，图像处理的图像和标签的格式是这样的：
