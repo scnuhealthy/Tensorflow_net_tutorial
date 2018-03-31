@@ -121,7 +121,7 @@ with tf.name_scope('loss'):
 loss = tf.reduce_mean(loss)
 
 with tf.name_scope('adam_optimizer'):
-  optimizer = tf.train.AdadeltaOptimizer(0.0001).minimize(cross_entropy)
+  optimizer = tf.train.AdadeltaOptimizer(0.0001).minimize(loss)
 ```
 
 ## 训练网络
